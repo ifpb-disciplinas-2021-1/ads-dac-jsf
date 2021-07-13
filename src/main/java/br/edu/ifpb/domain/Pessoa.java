@@ -1,9 +1,5 @@
 package br.edu.ifpb.domain;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
-
 public class Pessoa {
 
     private String nome;
@@ -16,7 +12,7 @@ public class Pessoa {
     }
     public Pessoa(String nome, String cpf) {
         this.nome = nome;
-        this.id = System.currentTimeMillis();
+        this.id = System.nanoTime();
         this.cpf = new CPF(cpf);
     }
     public void alterarNome() {
